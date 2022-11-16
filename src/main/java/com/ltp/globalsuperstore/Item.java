@@ -10,15 +10,15 @@ import javax.validation.constraints.Past;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class Item {
-    @NotBlank (message = "Please choose a category")
+    @NotBlank(message = "Please choose a category")
     private String category;
-    @NotBlank (message = "Name cannot be blank")
+    @NotBlank(message = "Name cannot be blank")
     private String name;
     @Min(value = 0, message = "Price cannot be negative")
     private Double price;
     @Min(value = 0, message = "Discount cannot be negative")
     private Double discount;
-    @Past (message = "Date must be in the past")
+    @Past(message = "Date must be in the past")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
     private String id;
