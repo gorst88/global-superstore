@@ -15,8 +15,12 @@ import com.ltp.globalsuperstore.service.StoreService;
 
 @Controller
 public class StoreController {
+    
+    StoreService storeService;
 
-    StoreService storeService = new StoreService();
+    public StoreController(StoreService storeService) {
+        this.storeService = storeService;
+    }
 
     @GetMapping("/")
     public String getForm(Model model, @RequestParam(required = false) String id) {
